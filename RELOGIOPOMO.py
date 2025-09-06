@@ -3,8 +3,6 @@ from PySide6.QtWidgets import QLabel,QGridLayout, QApplication,QMainWindow, QPus
 from PySide6.QtCore import QTime,QTimer
 from PySide6.QtGui import QIcon
 
-
-
 #Definição da janela 
 app = QApplication(sys.argv)
 JanelaCentral = QWidget()
@@ -20,9 +18,16 @@ Labelsepara = QLabel()
 LabelDaHora.setStyleSheet("Background-color: GREEN; padding:auto; font-size:100px")
 Labelsepara.setStyleSheet("Background-color:black")
 
+botao12 = QPushButton("12H")
+botao24 = QPushButton ("24H")
+
+
+
 #Adiciona o a label criada LabelDaHora ao widget
 layout.addWidget(LabelDaHora)
 layout.addWidget(Labelsepara)
+layout.addWidget(botao12)
+
 
 def AtualizaHora():
     Hora = QTime.currentTime().toString()
